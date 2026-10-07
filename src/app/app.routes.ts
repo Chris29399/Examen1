@@ -7,7 +7,19 @@ export const routes: Routes = [
   },
   {
     path: '',
-    redirectTo: 'home',
+    redirectTo: 'presentation',
     pathMatch: 'full',
+  },
+  {
+    path: 'presentation',
+    loadComponent: () => import('./presentation/presentation.page').then( m => m.PresentationPage)
+  },
+  {
+    path: 'multiplication',
+    loadComponent: () => import('./multiplication/multiplication.page').then( m => m.MultiplicationPage)
+  },
+  {
+    path: 'equation',
+    loadComponent: () => import('./equation/equation.page').then( m => m.EquationPage)
   },
 ];
